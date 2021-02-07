@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <title>Javascript | Gallery</title>
+        </head>
+            <body>
+                <h1 class="h1">Welcome to Photo Gallery. </h1>
+                <p class="p">If you want to go to our official website, click <a href="https://k3jtmxazybyckprjitymsa-on.drv.tw/Coding/HTML/www.DavidIndustries.com /" target="_blank">here</a></p><br>
+                <div class="container">
+                    <img id="expandedImg" src="images/apple.jpg" class="big">
+                    <div id="imgtext"></div>
+                </div>    
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/apple.jpg" style="width: 100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/samsung.jpg" style="width: 100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/google.jpg" style="width: 100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/huawei.jpg" style="width: 100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+
+                <script>
+                    function myFunction(imgs) {
+                      var expandImg = document.getElementById("expandedImg");
+                      var imgText = document.getElementById("imgtext");
+                      expandImg.src = imgs.src;
+                      imgText.innerHTML = imgs.alt;
+                      expandImg.parentElement.style.display = "block";
+                    }
+                </script>
+            </body>
+
+                <footer>
+                    <br><br><br><br><br><p class="info1"><a href="index.html">Magically teleport to homepage</a></p>
+                </footer>
+    </html>
